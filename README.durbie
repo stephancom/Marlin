@@ -1,1 +1,7 @@
-test
+this is forked from Erik Zalm's Marlin
+the changes here will allow the firmware to be used directly on a durbie prusa mendel's gen6.d board.
+the gen6.d board is a slight modification of the gen6 which adds in capability for a heated bed temperature controller.
+
+KP
+
+
