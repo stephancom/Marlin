@@ -512,7 +512,7 @@
     #define Z_STEP_PIN      27
     #define Z_DIR_PIN       28
     #define Z_ENABLE_PIN    29
-    #define Z_MIN_PIN       30
+    #define Z_MIN_PIN       0 // 30
     #define Z_MAX_PIN       -1
     
     //extruder pins
@@ -527,13 +527,15 @@
     #define HEATER_0_PIN    14    //changed @ rkoeppl 20110410
     #define HEATER_1_PIN    -1
     #define HEATER_2_PIN    -1
+
     #if MOTHERBOARD == 5
-    #define HEATER_BED_PIN  -1    //changed @ rkoeppl 20110410
-    #define TEMP_BED_PIN    -1    //changed @ rkoeppl 20110410
+    #define HEATER_BED_PIN  31//-1    //changed @ rkoeppl 20110410
+    #define TEMP_BED_PIN    1//-1    //changed @ rkoeppl 20110410
     #else
     #define HEATER_BED_PIN   1    //changed @ rkoeppl 20110410
     #define TEMP_BED_PIN     0    //changed @ rkoeppl 20110410
     #endif
+
     #define SDPOWER          -1
     #define SDSS          17
     #define LED_PIN         -1    //changed @ rkoeppl 20110410
