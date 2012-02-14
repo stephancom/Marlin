@@ -434,13 +434,13 @@
     #define HEATER_0_PIN    14    //changed @ rkoeppl 20110410
     #define HEATER_1_PIN    -1
     #define HEATER_2_PIN    -1
-    #define HEATER_BED_PIN  31//-1    //changed @ rkoeppl 20110410
-    #define TEMP_BED_PIN    1//-1    //changed @ rkoeppl 20110410
+    #define HEATER_BED_PIN  30//-1    //changed @ rkoeppl 20110410
+    #define TEMP_BED_PIN    0//-1    //changed @ rkoeppl 20110410
     
     #define SDPOWER          -1
     #define SDSS          17
     #define LED_PIN         -1    //changed @ rkoeppl 20110410
-    #define FAN_PIN         -1    //changed @ rkoeppl 20110410
+    #define FAN_PIN         1    //changed @ rkoeppl 20110410
     #define PS_ON_PIN       -1    //changed @ rkoeppl 20110410
     //our pin for debugging.
     

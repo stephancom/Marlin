@@ -216,7 +216,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
 
-#define min_software_endstops true //If true, axis won't move to coordinates less than zero.
+#define min_software_endstops false //If true, axis won't move to coordinates less than zero.
 #define max_software_endstops true  //If true, axis won't move to coordinates greater than the defined lengths below.
 #define X_MAX_LENGTH 205
 #define Y_MAX_LENGTH 205
@@ -224,7 +224,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#define HOMING_FEEDRATE {50*60, 50*60, 3*60, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {50*60, 50*60, 2*60, 0}  // set the homing speeds (mm/min)
 
 //homing hits the endstop, then retracts by this distance, before it tries to slowly bump again:
 #define X_HOME_RETRACT_MM 5 
@@ -238,14 +238,14 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 
 // default settings 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {32, 32, 2057.2, 514}  
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {32, 32, 2078.72, 514}  
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {40, 40, 3333.92, 360} //sells mendel with v9 extruder
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.3232, 80.8900, 2284.7651, 757.2218} // SAE Prusa w/ Wade extruder
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {40, 40, 2674.3602, 514}  // Durbie prusa mendel with 8-tooth RP plastic pulleys
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {32, 32, 2057.2, 514}  // Durbie prusa mendel with 10-tooth custom aluminium pulleys
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {40, 40, 2674.36, 514}  // Durbie prusa mendel with 8-tooth RP plastic pulleys, measured. (calculated values: {40, 40, 2560, xxx})
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {32, 32, 2078.72, 514}  // Durbie prusa mendel with 10-tooth custom aluminium pulleys, measured. (calculated values: {32, 32, 2048, xxx})
 
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 5, 45}    // (mm/sec)    
-#define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_ACCELERATION      {9000,9000,80,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves 
 #define DEFAULT_RETRACT_ACCELERATION  3000   // X, Y, Z and E max acceleration in mm/s^2 for r retracts
@@ -356,7 +356,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 //this prevents dangerous Extruder moves, i.e. if the temperature is under the limit
 //can be software-disabled for whatever purposes by
 #define PREVENT_DANGEROUS_EXTRUDE
-#define EXTRUDE_MINTEMP 130
+#define EXTRUDE_MINTEMP 170
 #define EXTRUDE_MAXLENGTH (X_MAX_LENGTH+Y_MAX_LENGTH) //prevent extrusion of very large distances.
 
 const int dropsegments=5; //everything with less than this number of steps will be ignored as move and joined with the next movement
